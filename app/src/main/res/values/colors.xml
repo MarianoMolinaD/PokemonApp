@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundCard">#2198D8</color>
+<!--    <color name="backgroundCard">#134F72</color>-->
+    <color name="backgrounTipe">#558B2F</color>
+    <color name="backgrounTest">#CB217060</color>
+    <color name="backgrounFont">#CB1F96D6</color>
+    <color name="colorStats">#D84315</color>
+    <color name="colorStatsLevel">#CB00A2FD</color>
+    <color name="colorStarsLevelEmpty">#CB96ADBA</color>
+    <color name="buttonFlating">#CB6FAC43</color>
+
+    <color name="colorRed">#E6FB8D52</color>
+    <color name="colorBlue">#8C5EB7DA</color>
+    <color name="colorGreen">#8C5BC660</color>
+    <color name="colorBlack">#3C3C3C</color>
+    <color name="colorBrown">#6E3333</color>
+    <color name="colorGray">#565A60</color>+
+    <color name="colorPink">#8ACA65E6</color>
+    <color name="colorPurple">#8A8049FF</color>
+    <color name="colorWhite">#757575</color>
+    <color name="colorYellow">#FFC984</color>
+
+    <color name="BackgrounCvInformation">#7EC8B9B9</color>
+    <color name="BackgrounCvFooter">#C8B9B9</color>
+
+    <color name="backgroundLoading">#FAFFCA2B</color>
+    <color name="colorLoading">#EBFFF400</color>
+    <color name="colorLoadingAll">#EBA5A5A5</color>
+    <color name="colorLoadingAll2">#EB6C6A6A</color>
+
+    //ColorGradient
+    <color name="gradientOne">#CB00A2FD</color>
+    <color name="gradientTwo">#CB53ABDC</color>
+    <color name="gradientThree">#CB00A2FD</color>
+
+</resources>

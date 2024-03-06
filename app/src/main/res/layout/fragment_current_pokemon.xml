@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clFon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgrounFont"
+    tools:context=".ui.view.fragment.CurrentPokemonFragment"
+    tools:ignore="MissingConstraints">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvType"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        tools:listitem="@layout/item_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamePokemon"
+        app:layout_constraintBottom_toTopOf="@+id/ivImagePokemon"
+        app:layout_constraintHorizontal_bias="0.8"
+        />
+
+    <LinearLayout
+        android:id="@+id/llConteButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp">
+
+        <!--android:layout_weight="2"
+        android:scaleType="fitStart"-->
+        <ImageView
+            android:id="@+id/ivButtonBack"
+            android:layout_width="65dp"
+            android:layout_height="36dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_flecha_izquierda"
+            android:background="?selectableItemBackgroundBorderless"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivLike"
+            android:layout_width="36dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="2"
+            android:scaleType="fitEnd"
+            android:src="@drawable/corazon1"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNamePokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:paddingHorizontal="16dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintTop_toBottomOf="@+id/llConteButtons"
+        tools:text="NamePokemon" />
+
+
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="35dp"
+        android:text="ID"
+        android:textAlignment="textEnd"
+        android:textColor="#9A8A4E4E"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cvinformation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cvinformation"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:background="@drawable/background_card_current"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_marginTop="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Stats"
+                android:textAlignment="textStart"
+                android:textColor="#80000000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvHp"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="HP"
+                        android:textColor="@color/colorStats"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHpLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="000"
+                        android:textColor="@color/colorStatsLevel"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/tvHp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvHpLevel"
+                        android:layout_width="255dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStatsLevel"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvHpLevel"></androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvHpLevelEmpty"
+                        android:layout_width="150dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStats"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvHpLevel"></androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvAtk"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="ATK "
+                        android:textColor="@color/colorStats"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvAtkLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="000"
+                        android:textColor="@color/colorStatsLevel"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/tvAtk" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAtkLevel"
+                        android:layout_width="255dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStatsLevel"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvAtkLevel"></androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAtkLevelEmpty"
+                        android:layout_width="150dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStats"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvAtkLevel"></androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvDef"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="DEF"
+                        android:textColor="@color/colorStats"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDefLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="000"
+                        android:textColor="@color/colorStatsLevel"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/tvDef" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvDefLevel"
+                        android:layout_width="255dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStatsLevel"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvDefLevel"></androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvDefLevelEmpty"
+                        android:layout_width="150dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStats"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvDefLevel"></androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvSatk"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="SATK"
+                        android:textColor="@color/colorStats"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSatkLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="000"
+                        android:textColor="@color/colorStatsLevel"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/tvSatk" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSatkLevel"
+                        android:layout_width="255dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStatsLevel"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvSatkLevel"></androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSatkLevelEmpty"
+                        android:layout_width="150dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStats"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvSatkLevel"></androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvSdef"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="SDEF"
+                        android:textColor="@color/colorStats"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSdefLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="000"
+                        android:textColor="@color/colorStatsLevel"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/tvSdef" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSdefLevel"
+                        android:layout_width="255dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStatsLevel"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvSdefLevel"></androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSdefLevelEmpty"
+                        android:layout_width="150dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStats"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvSdefLevel"></androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvSpd"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="SPD"
+                        android:textColor="@color/colorStats"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSpdLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:text="000"
+                        android:textColor="@color/colorStatsLevel"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/tvSpd" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSpdLevel"
+                        android:layout_width="255dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStatsLevel"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvSpdLevel"></androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSpdLevelEmpty"
+                        android:layout_width="150dp"
+                        android:layout_height="14dp"
+                        android:backgroundTint="@color/colorStats"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvSpdLevel"></androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTitleAbilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Abilities"
+                android:textAlignment="textStart"
+                android:textColor="#80000000"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAbilities"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                tools:listitem="@layout/item_type"
+                />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLoading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/backgroundLoading"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/pbPokemon"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:indeterminateTint="@color/colorLoading"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/pikachu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="Image loading" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/ivImagePokemon"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/pokemon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

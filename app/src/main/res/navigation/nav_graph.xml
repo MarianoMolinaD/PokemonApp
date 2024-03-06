@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/allPokemonFragment">
+
+    <fragment
+        android:id="@+id/allPokemonFragment"
+        android:name="com.portafoliowebmariano.pokedex.ui.view.fragment.AllPokemonFragment"
+        android:label="fragment_all_pokemon"
+        tools:layout="@layout/fragment_all_pokemon" >
+        <action
+            android:id="@+id/action_allPokemonFragment_to_currentPokemonFragment"
+            app:destination="@id/currentPokemonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentPokemonFragment"
+        android:name="com.portafoliowebmariano.pokedex.ui.view.fragment.CurrentPokemonFragment"
+        android:label="fragment_current_pokemon"
+        tools:layout="@layout/fragment_current_pokemon" >
+        <argument
+            android:name="pokemonUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_currentPokemonFragment_to_allPokemonFragment"
+            app:destination="@id/allPokemonFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="4dp"
+    app:shimmer_auto_start="true">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorLoadingAll2"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="12dp"
+            android:background="@color/colorLoadingAll"
+            />
+        <View
+            android:id="@+id/tvNamePokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:background="@color/colorLoadingAll"
+            />
+        <View
+            android:background="@color/colorLoadingAll"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="12dp"
+            />
+        <TextView
+            android:id="@+id/tvNumberPokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:text="#000"
+            android:textColor="#9EFFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info">Nintendo, pokemon and all other names and images are property of Nintendo Company, Ltd., Creatures Inc. and GameFreak. \n\n
+        This platform does not have official support and has no affiliation with the previously mentioned companies. Use of their names is in compliance with fair use laws. No copyright infringement is intended in any way.\n\n
+        © 2002-2024 Pokémon \n
+        © 1995-2004 Ninendo / Creatures Inc. / GAME FREAK Inc.
+    </string>
+</resources>
